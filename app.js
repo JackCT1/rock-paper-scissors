@@ -10,11 +10,12 @@ possibleChoices.forEach((choice) =>
   choice.addEventListener("click", (e) => {
     userButtonSelect = e.target.id;
     userChoice.innerHTML = userButtonSelect;
+    computerChoice.innerHTML = generateComputerChoice();
   })
 );
 
 function generateComputerChoice() {
-  const randomNumber = Math.floor(Math.random() * possibleChoices.length) + 1;
-  const computerChoice = numberToChoice.randomNumber;
-  return computerChoice;
+  let randomNumber = Math.floor(Math.random() * possibleChoices.length) + 1;
+  let computerSelect = numberToChoice[randomNumber];
+  return computerSelect;
 }
